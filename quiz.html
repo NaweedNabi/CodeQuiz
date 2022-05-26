@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+2|Baloo+Chettan+2|Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/quiz.css">
+  <title>Coding Quiz</title>
+ 
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background:transparent">
+ 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul id="navButtons" class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./quiz.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./score.html">High Score &#x1F3C6</a>
+        </li>
+
+      </ul>
+      <div id="scoreTimeCard">
+      <div id="time"></div>
+      <div id="score"></div>
+    </div>
+
+    </div>
+  </nav>
+
+
+  
+
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+
+       
+        </div>
+        <div class="card-body">
+          <div class="quiz-container">
+
+            <div class="wrapper">
+              <div id="start-screen" class="start">
+                <h1>Naweeds Coding Quiz</h1>
+                
+                  <h2>Answer the following code-related questions within the time limit.</h2>
+                  <ul>
+                    <li>1 point per questions, 15 total</li>
+                    <li>5 seconds per question, 75 seconds total</li>
+                    <li>Incorrect answers -2 seconds</li>
+                    <li>Correct answers +2 second</li>
+                  </ul>
+                
+                
+                <button id="start">Start Quiz</button>
+              </div>
+
+              <div id="questions" class="hide">
+                <h2 id="question-title"></h2>
+                <div id="choices" class="choices"></div>
+              </div>
+
+              <div id="end-screen" class="hide">
+                <h2>All done!</h2>
+                <p>Your final score is <span id="final-score"></span></p>
+                <p>
+                  Enter initials: <input type="text" id="initials" max="3" />
+                  <button id="submit">Submit</button>
+                </p>
+              </div>
+
+             </div><div id="feedback" class="feedback hide"></div>
+            </div>
+
+
+
+          
+        </div>
+      </div>
+
+    </div>
+    
+    <audio id="correctSound">   
+      <source src="./sounds/correct.wav"/>  
+      <audio id="wrongSound">   
+        <source src="./sounds/wrong.wav"/>  
+
+    <script src="./assets/quiz.js"></script>
+    <script src="./assets/score.js"></script>
+
+</body>
+
+</html>
